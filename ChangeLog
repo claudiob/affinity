@@ -1,0 +1,18 @@
+v1.0.4 - Updated for new Openstrands URL
+	openstrands.R - Changed URL prefix with http://www.mystrands.com/internalservices/
+
+v1.0.3 - Updated for public usage
+	DESCRIPTION - Changed public URL
+
+v1.0.2 - Removed alpha from graph colors
+    plots.R  - Colors have now FF in the alpha channel for Rpad compatibility
+
+v1.0.1 - Larger Netflix dataset
+    netflixMoviesCooccurrences - Substituted the list of Both Best Rated 
+	movies, which included movies rated by customers after position 200,000, 
+	and now includes movies rated by customers after position 100,000, where 
+	customers are sorted along the number of ratings provided.
+    netflixGenres - Modified the functions to load such dataset to avoid 
+	memory crashes.
+    affinity - Added category correlation matrix to runExamples
+    instancesCategories - Changed from *integer* to *boolean* matrix

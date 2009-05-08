@@ -1,0 +1,162 @@
+Core instances
+
+#### MYSTRANDS GENRES SCENARIO ####
+
+'Rock' (2286)                                'R&B' (459)                         'Rap' (243)                              'Country' (176) 
+	The Go-Betweens (Rock)               	Loose Ends (R&B)                 	Too Short (Rap)                   	Tanya Tucker (Country) 
+	Mclusky (Rock)                       	Gerald Levert (R&B)              	Westside Connection (Rap)         	Diamond Rio (Country) 
+	Adam Green (Rock)                    	Zhane (R&B)                      	Masta Ace Incorporated (R&B)      	Confederate Railroad (Country) 
+	The Wedding Present (Rock)           	Stephanie Mills (R&B)            	Shyne (Rap)                       	The Judds (Country) 
+	Imperial Teen (Rock)                 	Eric Benet (R&B)                 	Dead Prez (Rap)                   	Julie Roberts (Country) 
+	                                                                      
+                                                                              
+'Electronic' (163)                           'Jazz' (126)                        'Gospel' (125)                         'Latin' (76) 
+	Kaskade (Electronic)                 	Bob James (Jazz)                 	Selah (Gospel)                   	Ricardo Arjona (World)
+	Sasha (Techno) (Electronic)          	Donald Byrd (Jazz)               	Jaci Velasquez (Gospel)          	Diego Torres (Latin) 
+	Junkie XL (Electronic)               	Peter White (Jazz) (Jazz)        	Caedmon's Call (Gospel)          	Marc Anthony (Latin) 
+	Talvin Singh (Electronic)            	Keiko Matsui (Jazz)              	Point Of Grace (Gospel)          	Chayanne (Latin) 
+	The Cinematic Orchestra (Jazz)       	Ramsey Lewis (Jazz)              	Big Daddy Weave (Gospel)         	Luis Miguel (Latin) 
+	                                    
+	                                    
+'VocalMusic' (67)                             'Reggae' (46)                      'World' (45)                           'Comedy' (40) 
+	Johnny Mathis (VocalMusic)           	Barrington Levy (Reggae)         	Front 242 (World)                	Steve Martin (Comedy) 
+	Manhattan Transfer (VocalMusic)      	Yellowman (Reggae)               	Pop Will Eat Itself (Rock)       	Eddie Izzard (Comedy) 
+	Eartha Kitt (VocalMusic)             	Dennis Brown (Reggae)            	Natacha Atlas (World)            	George Carlin (Comedy) 
+	Peggy Lee (VocalMusic)               	Black Uhuru (Reggae)             	VNV Nation (World)               	Margaret Cho (Comedy) 
+	Ella Fitzgerald (Jazz)               	Lee \"Scratch\" Perry (Reggae)   	Collide (Rock)                   	Robin Williams (Comedy) (Comedy) 
+	                                      
+	                                    
+'Folk' (39)                                   'Blues' (27)                       'Soundtracks' (26)                     'New Age' (18) 
+	Hem (Rock)                           	Muddy Waters (Blues)             	James Horner (Soundtracks)        	David Arkenstone (New Age) 
+	Luka Bloom (Folk)                    	Taj Mahal (Blues)                	Alan Silvestri (Soundtracks)      	David Lanz (New Age) 
+	Greg Brown (Folk)                    	Dr. John (Blues)                 	Michael Giacchino (Soundtracks)   	Keiko Matsui (Jazz) 
+	The Chieftains (Folk)                	Albert King (Blues)              	Danny Elfman (Soundtracks)        	Jesse Cook (New Age) 
+	The Kingston Trio (Folk)             	Lightnin' Hopkins (Blues)        	Hans Zimmer (Soundtracks)         	Ravi Shankar (World) 
+	
+	
+
+#### MYSTRANDS TAGS SCENARIO ####
+                                                                                                                                  'r&b' (960)
+'rock & pop' (2549)                                             'rock' (2143)                                                     	Loose Ends (r&b, pop r&b)
+	Mew (rock, rock & pop, r&b, dance, hard rock)           	Mclusky (rock, rock & pop)                                	Zhane (r&b, dance)
+	Mclusky (rock, rock & pop)                              	The Go-Betweens (rock, rock & pop, new wave)              	Gerald Levert (r&b, pop r&b)
+	The Go-Betweens (rock, rock & pop, new wave)            	Mew (rock, rock & pop, r&b, dance, hard rock)             	Charlie Wilson (R&B)
+	Adam Green (rock, rock & pop, alternative)              	Adam Green (rock, rock & pop, alternative)                	(r&b)
+	French Kicks (rock, hardcore punk)                      	Imperial Teen (rock, rock & pop)                          	Soul II Soul (electronic, rock & pop, r&b, dance, house)
+	                                                        
+	                                                        
+'rap' (366)                                                     'christmas' (364)                                                 'alternative' (303)
+	Too Short (r&b, rap, gangsta hardcore)                  	Anne Murray (country, gospel, ..., christmas, folk)       	The Go-Betweens (rock, rock & pop, new wave)
+	Westside Connection (r&b, rap, gangsta hardcore)        	Tanya Tucker (country, singer songwriter, nashville sound)	Mclusky (rock, rock & pop)
+	Shyne (r&b, rap)                                        	Linda Ronstadt (rock, rock & pop, jazz vocal, ...)        	Imperial Teen (rock, rock & pop)
+	Young Gunz (r&b, rap, east coast rap)                   	Manhattan Transfer (jazz instrument, ..., christmas)      	The Wedding Present (rock, rock & pop, alternative)
+	Masta Ace Incorporated (r&b, rap)                       	The Judds (country, gospel, contemporary country, christmas)   	Papas Fritas (rock & pop)
+	                                                        
+                                                                
+'electronic' (274)                                              'dance' (243)                                                     'country' (225)
+	Kaskade (electronic, rock & pop, r&b, house)            	Kaskade (electronic, rock & pop, r&b, house)              	Diamond Rio (rock & pop, country, contemporary country)
+	Junkie XL (heavy metal, electronic, rock & pop, ...)    	Sonique (rock, electronic, r&b, dance, techno)            	Tanya Tucker (country, singer songwriter, nashville sound)
+	Sasha (Techno) (electronic, techno)                     	Junkie XL (heavy metal, electronic, ..., dance, electronica)	Confederate Railroad (country)
+	The Cinematic Orchestra (jazz, electronic, ...)         	Junior Jack (electronic, r&b, dance, house)               	Julie Roberts (country, contemporary country)
+	Talvin Singh (electronic, r&b, dance, techno, ...)      	Sasha (Techno) (electronic, techno)                       	The Judds (country, gospel, contemporary country, christmas)
+	                                                        
+	                                                                                                                          'international' (190)
+'heavy metal' (206)                                             'spoken word' (191)                                               	Ricardo Arjona (latin, international)
+	3 Inches Of Blood (rock & pop, alternative)             	The Tea Party (rock, heavy metal, rock & pop)             	Diego Torres (latin, international)
+	In Flames (rock, heavy metal, death metal)              	LEN (rock, rock & pop, gospel, gospel rap)                	Marc Anthony (latin, salsa, rock & pop, pop vocal, international, latin vocals, spoken word, interview)
+	Opeth (rock, heavy metal, death metal, prog metal)      	Stroke 9 (rock, rock & pop)                               	Chayanne (latin, international, puerto rican)
+	Diecast (rock, heavy metal, rock & pop)                 	Matthew Good Band (rock & pop)                            	Luis Miguel (latin, international, mexican, dominican)
+	A Life Once Lost (rock & pop, hard rock, hardcore punk) 	A3 (rock, electronic, rock & pop)                           
+	                                                        
+                                                                
+'interview' (170)                                               'jazz instrument' (168)                                           'hardcore punk' (166)
+	The Tea Party (rock, heavy metal, rock & pop)           	Bob James (jazz, electronic, jazz instrument, piano, ...) 	Comeback Kid (rock, hardcore punk)
+	A3 (rock, electronic, rock & pop)                       	Peter White (Jazz) (jazz, jazz instrument, guitar, christmas)	Death By Stereo (rock, hardcore punk)
+	Stroke 9 (rock, rock & pop)                             	Donald Byrd (jazz, rock & pop, jazz instrument, trumpet)  	Every Time I Die (rock, rock & pop, hardcore punk)
+	LEN (rock, rock & pop, gospel, gospel rap)              	Keiko Matsui (jazz, jazz instrument, piano, ...)          	Converge (rock, rock & pop, hardcore punk)
+	Matthew Good Band (rock & pop)                          	Najee (rock, jazz, jazz instrument, saxophone)            	Good Riddance (rock, hardcore punk)
+	
+
+
+#### NETFLIX GENRES SCENARIO (AFTER 200K) ####
+
+'Drama' (3907)                                                  'Comedy' (2761)                                                   'Thriller' (1606) 
+	Cambridge Spies (Drama, History)                        	To Grandmother's House We Go (Family, Comedy, Adventure)  	Tales from the Crypt: Deadly Duo (Thriller, Horror) 
+	3 Women (Drama)                                         	The Real World: Exotic Vacations (Comedy)                 	Knock Off (Action, Thriller) 
+	The French Lieutenant's Woman (Drama, Romance)          	The Baby Sitters Club (Family, Comedy)                    	976-Evil (Horror) 
+	Umberto D. (Drama)                                      	Ernest Goes to Africa (Family, Comedy)                    	Cheerleader Camp (Comedy, Mystery, Horror) 
+	Wilde (Drama, Biography)                                	The Flintstones in Viva Rock Vegas (Family, Comedy)       	Night of the Demons (Horror) 
+	                                                        
+                                                                
+'Romance' (1422)                                                'Action' (1361)                                                   'Crime' (983) 
+	There's No Business Like Show Business (Drama, Musical) 	Knock Off (Action, Thriller)                              	South Central (Drama, Crime) 
+	In the Good Old Summertime (Comedy, Musical)            	Street Fighter (Action, Thriller, Adventure, Sci-Fi)      	Sugar Hill (Drama, Thriller) 
+	The Country Girl (Drama)                                	Universal Soldier (Drama, Action, Sci-Fi)                 	Which Way is Up? (Comedy) 
+	High Society (Comedy, Romance, Musical)                 	Wing Commander (Action, Sci-Fi)                           	Point Blank (Drama, Action, Thriller, Crime) 
+	You Were Never Lovelier (Comedy, Romance, Musical)      	Raw Deal (Action, Thriller, Crime)                        	State of Grace (Drama, Thriller, Crime) 
+	                                                        
+                                                                
+'Adventure' (922)                                               'Horror' (804)                                                     'Documentary' (767) 
+	Wing Commander (Action, Sci-Fi)                         	976-Evil (Horror)                                          	A History of God (Documentary) 
+	T-Rex: Back to the Cretaceous: IMAX (Adventure)         	Cheerleader Camp (Comedy, Mystery, Horror)                 	Breaking the Da Vinci Code (Documentary) 
+	Spider-Man: The Ultimate Villain Showdown (Animation)   	Night of the Demons (Horror)                               	Cream: Strange Brew (Music) 
+	Teenage Mutant Ninja Turtles (1980s) (Adventure, ...)   	My Bloody Valentine (Drama, Thriller, Horror)              	Pandaemonium (Drama) 
+	Recess: School's Out (Animation, Family, Comedy, ...)   	Sorority House Massacre II (Thriller, Horror)              	Marley Magic (Documentary, Music) 
+	                                                        
+	                                                        
+'Family' (747)                                                  'Sci-Fi' (702)                                                     'Fantasy' (605) 
+	Princess Daisy (Drama, Romance)                         	Darkside Blues (Animation, Sci-Fi)                         	Darkside Blues (Animation, Sci-Fi) 
+	Monkey Trouble (Family, Comedy)                         	Queen Emeraldas (Animation, Sci-Fi)                        	Queen Emeraldas (Animation, Sci-Fi) 
+	Tom and Jerry: The Movie (Animation, Family, ...)       	Heart of Dragon (Documentary)                              	Cardcaptor Sakura (Animation, Adventure, Fantasy) 
+	Recess: School's Out (Animation, Family, Comedy, ...)   	Sorority Babes in the Slimeball Bowl-O-Rama (Comedy, Horror)	Puni Puni Poemy (Animation, Comedy, Fantasy, Sci-Fi, Short)
+	Hello Kitty Goes to the Movies (Animation, Family, ...) 	Degree of Guilt (Drama, Mystery)                           	Final Fantasy Unlimited () 
+	                                                        
+	                                                        
+'Mystery' (558)                                                 'Music' (503)                                                      'Animation' (414) 
+	976-Evil (Horror)                                       	Marley Magic (Documentary, Music)                          	Darkside Blues (Animation, Sci-Fi) 
+	Cheerleader Camp (Comedy, Mystery, Horror)              	Cream: Strange Brew (Music)                                	A.D. Police Files 1-3 (Animation, Thriller, Sci-Fi) 
+	Murder by Decree (Mystery, Thriller, Crime, Horror)     	Classic Albums: Elton John: Goodbye ... (Documentary, Music)	Queen Emeraldas (Animation, Sci-Fi) 
+	Sleepaway Camp (Horror)                                 	Paul McCartney: In the World Tonight (Documentary, Music)  	Gilgamesh (Drama, Adventure) 
+	Night of the Demons (Horror)                            	Eric Clapton: Live in Hyde Park (Music)                    	Divergence Eve (Animation) 
+
+
+#### NETFLIX GENRES SCENARIO (AFTER 100K) ####
+
+'Drama' (3994)                                                  'Comedy' (2810)                                                    'Thriller' (1663)
+Desert Bloom (Family, Drama)                                    	To Grandmother's House We Go (Family, Comedy, Adventure)   	Carnosaur 3 (Action, Horror, Sci-Fi) 
+Cambridge Spies (Drama, History)                                	The Baby Sitters Club (Family, Comedy)                     	House II: The Second Story (Comedy, Horror, Fantasy) 
+La Promesse (Drama)                                             	Dracula Rising (Romance, Horror)                           	Ghost Lake (Mystery, Thriller, Horror) 
+Mr. & Mrs. Bridge (Drama)                                       	Growing Up Brady (Drama, Biography)                        	Dentist (Thriller, Horror) 
+3 Women (Drama)                                                 	Life-Size (Family, Comedy, Fantasy, Sport)                 	The Triangle (Drama, Mystery, Action, Thriller, Adventure) 
+                                                                	                                                           	
+                                                                	                                                           	
+'Romance' (1442)                                                'Action' (1394)                                                    'Crime' (1008)
+Love Me or Leave Me (Drama, Romance, Music, Biography)          	Knock Off (Action, Thriller)                               	Penitentiary (Drama) 
+A Season on the Brink (Drama, Sport)                            	Darkman II: The Return of Durant (Action, Horror, Sci-Fi)  	Sweet Sweetback's Baadasssss Song (Drama, Action) 
+Bells Are Ringing (Comedy, Romance, Musical)                    	Street Fighter (Action, Thriller, Adventure, Sci-Fi)       	Sugar Hill (Drama, Thriller) 
+Mr. & Mrs. Bridge (Drama)                                       	The Triangle (Drama, Mystery, Action, Thriller, Adventure) 	A Rage in Harlem (Comedy, Crime) 
+There's No Business Like Show Business (Drama, Musical)         	Death Warrant (Drama, Mystery, Action)                     	Shock Corridor (Drama, Mystery) 
+                                                                	                                                           	
+                                                                	                                                           	
+'Adventure' (932)                                               'Horror' (868)                                                     'Documentary' (777)
+Medabots (Animation, Family, Action, Adventure, Sci-Fi)         	Carnosaur 3 (Action, Horror, Sci-Fi)                       	Johnny Skidmarks (Mystery, Thriller) 
+Dragons: Fire and Ice (Animation, Family, Adventure, Fantasy)   	Breeders (Adult)                                           	A History of God (Documentary) 
+Saber Marionette J (Animation, Comedy, Romance, Adventure, ...) 	Octopus 2: River of Fear (Horror)                          	History Lessons (Documentary, Adult) 
+The Pebble and the Penguin (Animation, Family)                  	Bog Creatures (Horror)                                     	Sextette (Comedy, Romance, Musical) 
+Warriors of Virtue (Action, Adventure, Fantasy)                 	Jack O'Lantern (Horror)                                    	She-Devils on Wheels (Drama, Action) 
+                                                                	                                                           	
+                                                                	                                                           	
+'Family' (753)                                                  'Sci-Fi' (728)                                                     'Fantasy' (612)
+Dil Pe Mat Le Yaar!! (Drama, Adventure)                         	Octopus 2: River of Fear (Horror)                          	Divergence Eve (Animation) 
+A Pup Named Scooby-Doo (Animation, Family, Comedy, ...)         	Bog Creatures (Horror)                                     	Saber Marionette J (Animation, Comedy, Romance, Action, Adventure, Sci-Fi) 
+Casper: A Spirited Beginning (Family, Comedy, Horror, Fantasy)  	Breeders (Adult)                                           	Dragons: Fire and Ice (Animation, Family, Adventure, Fantasy) 
+The Tangerine Bear (Animation, Family)                          	Final Examination (Thriller, Horror)                       	House II: The Second Story (Comedy, Horror, Fantasy) 
+The Land Before Time IV: Journey... (Animation, Family, ...)    	Slave Girls From Beyond Infinity (Comedy, Sci-Fi, ...)     	Queen Emeraldas (Animation, Sci-Fi) 
+                                                                	                                                           	
+                                                                	                                                           	
+'Mystery' (572)                                                 'Music' (505)                                                      'Animation' (415)
+Carnosaur 3 (Action, Horror, Sci-Fi)                            	A Voice from Heaven (Documentary)                          	Divergence Eve (Animation) 
+Ghost Lake (Mystery, Thriller, Horror)                          	Classic Albums: Phil Collins: Face... (Documentary, Music) 	Gravion (Animation, Comedy, Adventure, Sci-Fi) 
+Jack O'Lantern (Horror)                                         	The Who: Live at the Royal Albert Hall (Documentary, Music)	Queen Emeraldas (Animation, Sci-Fi) 
+Adam & Evil (Horror)                                            	Cream: Strange Brew (Music)                                	Ayane's High Kick (Animation, Action) 
+Desperate Souls (Action, Horror)                                	Cheap Trick: Live in Australia (Documentary, Music)        	Dil Pe Mat Le Yaar!! (Drama, Adventure) 
