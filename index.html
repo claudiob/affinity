@@ -1,1 +1,239 @@
-My GitHub Page
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Analysis of artists and musical genres - Strands Labs</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en" />
+<meta name="language" content="en" />
+<meta name="robots" content="all" />
+<meta http-equiv="imagetoolbar" content="false" />
+
+<meta name="author" content="claudio@iiia.csic.es" />
+<meta name="Copyright" content="Claudio Baccigalupo" />
+<meta name="Version" content="1.0" />
+
+<meta name="description" content="Study of fuzzy genre-affinity degrees for musical artists" />
+<meta name="keywords" content="recommending systems, CBR, co-occurrence analysis, artificial intelligence, music, artists, genres, musicstrands, baccigalupo, donaldson, plaza" />
+
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<style type="text/css" title="currentStyle" media="all">
+	@import "layout.css";
+</style>
+</head>
+
+<body>
+
+<div id="document_box">
+<h1>Uncovering affinity of artists to multiple genres from social behaviour data</h1> 
+<h2>
+	<img src="strandslabs.png" alt="Strands Labs" />
+</h2> 
+		
+<h3>1. Background</h3>
+<p>This page presents datasets, examples, and extensions to the analysis described in the following article, presented at the <strong>ISMIR 2008</strong> conference in Philadelphia (U.S.A.):</p>
+<ul class="attachment_list">
+	<li>
+	<a href="http://www.iiia.csic.es/~claudio/papers/Baccigalupo-Donaldson-Plaza-2008-ISMIR.pdf" title="Download ISMIR 2008 Paper">
+	<img class="icon" src="logo_pdf.gif" alt="PDF Format" />
+	<span class="description"><strong>Uncovering affinity of artists to multiple genres<br /> from social behaviour data</strong><br /><em>(Claudio Baccigalupo, Justin Donaldson, Enric Plaza &mdash; ISMIR 2008)</em></span>
+	</a>
+	</li>
+</ul>
+
+
+<h3>2. Data: co-occurrences of artists in playlists</h3>
+<div class="sideimage_box">
+	<a href="http://labs.strands.com/music/affinity/affinity_dataset.zip"><img src="download_dataset_off.png" style="border: 0px;" alt="Download dataset" /></a>
+</div>
+<p>Our work is based on the observation of the co-occurrences of 4,000 musical artists in a dataset of <strong>playlists</strong> compiled by the members of <strong>MusicStrands</strong>. 
+	Anyone can freely download this dataset to perform additional social based analysis.</p> 
+
+<p>The dataset is an elaboration of 1,030,068 user-compiled playlists, collected from the <a href="http://www.mystrands.com">MusicStrands Web site</a> on July 31st, 2007. 
+The dataset summarises how the songs of the 4,000 most popular artists <em>co-occur</em> in these playlists, and contains the following files:</p><ul>
+<li><em>msArtistsGenres.txt</em>: lists the 4,000 artist IDs, their genre IDs, and Musicbrainz IDs</li>
+<li><em>msArtistsCooccurrences.txt</em>: lists, for each pair of artists, the number of playlists where they co-occur separated by no more than 2 songs</li>
+<li><em>msTags.txt</em>: lists all the tags applied by MusicStrands users to any artist in the dataset</li>
+<li><em>msArtistsTags.txt</em>: lists, for each artist, the tags that users applied to that artist.</li>
+</ul>
+
+<p>Note that the dataset does <em>not</em> contain the actual names for each artist and genre.  
+To obtain this information, it is necessary to register for a (free) Openstrands Developer account, and use the API to translate the numeric ID's into name labels. Instructions and more information is available on the <a href="http://www.mystrands.com/openstrands">OpenStrands Web page</a>.</p>
+
+<p>The dataset is released under a GPL license, as described in the <a href="http://www.mystrands.com/openstrands/terms.vm">Terms of Service</a>.</p>
+	
+<h3>3. Results: artists, genres, tags, a fuzzy approach</h3>
+
+<p>Our assumption is that when two artists or genres co-occur together and closely in many playlists, they have some form of shared <strong>cultural affinity</strong>.  We use both the existence (occurring <em>together</em> on a playlist), and the distance (occurring <em>closely</em> within one or two songs of each other) to produce a single &ldquo;affinity&rdquo; metric between artists and genres.</p>
+
+
+<h4>Affinity of an artist to multiple genres</h4>
+<div class="sideimage_box">
+ <img src="ga_madonna_s.png" class="example" alt="Genre-affinity of Madonna" />
+</div>
+
+<p>For example, if we observe that a large number of songs by <a href="http://www.mystrands.com/artist/10961">Madonna</a> co-occur often and closely with songs whose artists are classified in the <em>Latin</em> genre, then we argue that Madonna has a certain affinity with <em>Latin</em>, even though the only genre-label attached to Madonna in the dataset is <em>Rock/Pop</em>.
+
+	This graph shows the genre-affinity degree of Madonna to five different genres. 
+Note that her affinity to <em>R&amp;B</em> is higher than her affinity to <em>Rock/Pop</em> (her original genre in the dataset), revealing that people tend to associate Madonna in playlists more with <em>R&amp;B</em> than with <em>Rock/Pop</em> artists.<br /> 
+The affinity degrees are normalised, so the fact that there are more <em>Rock/Pop</em> than <em>R&amp;B</em> artists in the dataset does not overemphasize associations in any one genre.
+</p>
+
+<h4>Centrality of artists to multiple genres</h4>
+<div class="sideimage_box">
+ <img src="gc_madonna_s.png" class="example" alt="Genre-centrality of Madonna" />
+</div>
+
+<p>The <strong>genre-centrality</strong> of Madonna to a genre <em>g</em> is the percentage of artists whose genre affinity to <em>g</em> is lower or equal than the genre affinity degree of Madonna.<br />
+This graph shows the genre-centrality of Madonna to eight different genres. 
+Note that her genre-centrality to <em>Latin</em> is almost 86%, showing that Madonna tends to occur very often with <em>Latin</em> artists; while her genre-centrality to <em>Jazz</em> is only 30%, showing a small association with <em>Jazz</em> artists in playlists.<br />
+Artists with the highest genre-centrality values are called <strong>core artists</strong>, and are good &lsquo;social&rsquo; representatives of a genre. For instance, the core artists for <em>Latin</em> are: <a href="http://www.mystrands.com/artist/3216">Ricardo Arjona</a>, <a href="http://www.mystrands.com/artist/16330">Diego Torres</a>, <a href="http://www.mystrands.com/artist/3146">Marc Anthony</a>, <a href="http://www.mystrands.com/artist/5123">Chayanne</a>, and <a href="http://www.mystrands.com/artist/11666">Luis Miguel</a>.</p>
+
+<!--<h4>Centrality of two artists to multiple genres</h4>-->
+<div class="sideimage_box">
+ <img src="gc_madonna_jacksons_s.png" class="example" alt="Genre-centrality of Madonna and The Jacksons" />
+</div>
+
+<p>This graph <strong>compares</strong> the <strong>genre-centrality</strong> of Madonna and of <a href="http://www.mystrands.com/artist/9224">The Jacksons</a> to four different genres. 
+Although the two artists have different genre labels in the dataset (<em>Rock/Pop</em> and <em>R&amp;B</em>), they present similar affinities to the same genres:
+both are strongly associated with <em>R&amp;B</em> and <em>Rap</em> artists, but not as much with <em>Rock/Pop</em> or <em>Country</em> artists.<br />
+Determining a &ldquo;Ground Truth&rdquo; for artist or genre similarity is a contentious topic in conventional comparitive musicology.  The genre affinity method follows a strictly social approach towards understanding relationships between music.  It distinguishes artists and genres using the aggregation of multiple user preferences, in the form of human-compiled playlists, rather than an acoustic or symbolic heuristic pertaining to the musical content.
+<!--This method can distinguish both similarity and dissimilarity.  An opposite result to the Madonna/Jackson Five example would be obtained by comparing Madonna with <a href="http://www.mystrands.com/artist/11611">Metallica</a>: both are <em>Rock/Pop</em> in the dataset, but would show many distinct genre-centrality values in the comparison graph.-->
+</p>
+
+<h4>Correlation between two genres</h4>
+<div class="sideimage_box">
+ <img src="gc_rap_rnb.png" class="example" alt="Correlation between Rap and R&amp;B" />
+</div>
+
+<p>We state that two genres <em>g</em> and <em>h</em> are <strong>correlated</strong> when artists with a high genre affinity degree to <em>g</em> tend to have a high genre affinity degree to <em>h</em>; 
+and two genres are <strong>independent</strong> when 
+their affinity degrees do not show any sign of correlation.<br />
+This graph shows, for each artist in the dataset, its affinity degree to 
+<em>Rap</em> (<em>x</em> axis), to <em>R&amp;B</em> (<em>y</em> axis), and its original genre 
+label (point type). 
+Note that artists with high affinity to <em>Rap</em> (in 
+the rightmost section) tend to have a high affinity to 
+<em>R&amp;B</em> as well (in the uppermost section), suggesting that the two genres are correlated: artists associated (in playlists) with <em>R&amp;B</em> artists are often associated with <em>Rap</em> artists as well.
+</p>
+
+<div class="sideimage_box">
+ <img src="gc_rap_country.png" class="example" alt="Correlation between Rap and Country" />
+</div>
+
+<p>To quantify the correlation between any two genres <em>g</em> and <em>h</em>, we employ <strong>Pearson's coefficient</strong> which assesses the linear correlation between the affinity degree of artists from two genres.<br /> 
+In the case of <em>Rap</em> and <em>R&amp;B</em>, the coefficient equals 0.6, sustaining the hypothesis that the two genres are &lsquo;socially related&rsquo;.
+For <em>Rap</em> and <em>Country</em>, on the other hand, the coefficient is almost null (0.1), sustaining the hypothesis that the two genres are independent, as suggested by this graph, showing for each artist in the dataset its affinity degree to 
+<em>Rap</em> (<em>x</em> axis), to <em>Country</em> (<em>y</em> axis), and its original genre label.<!-- (point type).--><br />
+This analysis exposes strong cultural relations between genres that are often not present in acoustic or symbolic analysis.</p>
+
+<h4>Correlation between artists</h4>
+<div class="sideimage_box">
+ <img src="eucl_map.png" class="example" alt="Euclidean-distance 2D map of artists as genre-affinity vectors" />
+</div>
+
+<p>Artists are represented as vectors of genre-affinity degrees, and this allows to compare any pair of artists by calculating the distance between their <strong>genre-affinity vectors</strong>. 
+For example, the vectors for Madonna and The Jacksons are close, which highlights that people &ldquo;use&rdquo; these artists in a similar way, associating them with artists from the same genres in their playlists.<br />
+The graph shows a 2D visualisation of all the artists in the dataset, based on a  <strong>dimensionality reduction</strong> of their genre-affinity vectors. This technique algorithimically positions the artists in two dimensions, preserving the Euclidean distance with a minimum of error.</p>
+
+<h4>Uncovering affinity of artists to tags</h4>
+
+<p>The dataset also contains valuable information about <b>tags</b> that MusicStrands users applied to artists. Then, the techniques illustrated can be  applied to uncover fuzzy affinities, centrality values and correlations between artists and tags.<br />
+For instance, we discovered that the core artists for the tag <em>Heavy Metal</em> are
+<a href="http://www.mystrands.com/artist/72293">3 Inches Of Blood</a>,
+<a href="http://www.mystrands.com/artist/31475">In Flames</a>,
+<a href="http://www.mystrands.com/artist/35112">Opeth</a>,
+<a href="http://www.mystrands.com/artist/56482">Diecast</a>, and
+<a href="http://www.mystrands.com/artist/72070/ref/12">A Life Once Lost</a>,
+and those for the tag <em>Jazz Instrumental</em> are <a href="http://www.mystrands.com/artist/1203">Bob James</a>, <a href="http://www.mystrands.com/artist/2631">Peter White</a>, <a href="http://www.mystrands.com/artist/347">Donald Byrd</a>, <a href="http://www.mystrands.com/artist/1596">Keiko Matsui</a>, and <a href="http://www.mystrands.com/artist/1773">Najee</a>.
+Once again, this is a valuable knowledge, obtained aggregating the preferences of a large audience, without any a priori information about the <strong>meaning</strong> of a specific tag.</p>
+
+
+<h3>4. Beyond music: content-agnostic social analysis</h3>
+
+<p>The social-based analysis presented provides new tools and a new ontology to describe richer relationships between musical artists and genres or tags.
+	The uncovered knowledge does not come from experts or from automatic, content-based algorithms, but from the analysis of the collective behaviour of listeners.<br />
+The importance of the proposed analysis is that it can be <strong>applied to any domain</strong> that presents <em>objects</em> (e.g., artists), <em>categories</em> (e.g., genres), and <em>social behaviour data</em> (e.g., multiple human-compiled playlists),
+	in order to uncover a more detailed and &ldquo;social-aware&rdquo; knowledge on that domain.</p>
+	
+<p>As an example, we applied the same analysis on the domain of <strong>movies</strong>. 
+	First, we retrieved from <strong>IMDB</strong> a <a href="http://www.imdb.com/interfaces#plain">list of popular movies</a>, together with their genre labels (note that a movie can be labelled with multiple genres).
+	Next, we retrieved from <strong>Netflix</strong> the <a href="http://www.netflixprize.com/download">Netflix Prize dataset</a>, which lists the movies watched by a subset of Netflix users, together with the rating assigned.
+	Then, for each pair of movies, we checked the number of Netflix users who loved both movies (that is, users who watched them both and assigned them the highest possible rating).
+	Finally, we uncovered movie-to-movie and movie-to-genre affinities with the same methods described in our paper.</p>
+	
+	<div class="sideimage_box">
+	 <img src="ga_breakfast.png" class="example" alt="Genre-affinity of Breakfast at Tiffany's" />
+	</div>	
+<p>This graph shows the <strong>genre-centrality</strong> of <a href="http://www.imdb.com/title/tt0054698/">Breakfast at Tiffany's</a> (<em>Comedy</em>, <em>Drama</em>, <em>Romance</em>) to six different genres. 
+	Using Euclidean distance among genre-affinity vectors, we discovered that the nearest neighbours for this movie are: <a href="http://www.imdb.com/title/tt0079477/">A Little Romance</a> (<em>Comedy</em>, <em>Romance</em>) <a href="http://www.imdb.com/title/tt0106833/">Ethan Frome</a> (<em>Drama</em>) <a href="http://www.imdb.com/title/tt0051383/">Auntie Mame</a> (<em>Comedy</em>, <em>Drama</em>), <a href="http://www.imdb.com/title/tt0098575/">Valmont</a> (<em>Drama</em>, <em>Romance</em>), and <a href="http://www.imdb.com/title/tt0093565/">Moonstruck</a> (<em>Comedy</em>, <em>Drama</em>, <em>Romance</em>).<br />
+	We also investigated <strong>core movies</strong> for the different genres; for instances core movies for <em>Action</em> are: <a href="http://www.imdb.com/title/tt0120724/">Knock Off</a> (<em>Action</em>, <em>Thriller</em>) <a href="http://www.imdb.com/title/tt0109552/">Darkman II: The Return of Durant</a> (<em>Action</em>, <em>Horror</em>, <em>Sci-Fi</em>) <a href="http://www.imdb.com/title/tt0111301/">Street Fighter</a> (<em>Action</em>, <em>Thriller</em>, <em>Adventure</em>, <em>Sci-Fi</em>) <a href="http://www.imdb.com/title/tt0452573/">The Triangle</a> (<em>Drama</em>, <em>Mystery</em>, <em>Action</em>, <em>Thriller</em>, <em>Adventure</em>), and <a href="http://www.imdb.com/title/tt0099385/">Death Warrant</a> (<em>Drama</em>, <em>Mystery</em>, <em>Action</em>).</p>
+	
+<p>This table shows the correlation of seven different genres in terms of Pearson's coefficient:</p>
+
+<div class="sideimage_box" id="large_table">
+ <img src="table.png" class="example" alt="Correlation of movie genres" />
+</div>	
+	
+<p>Although the method we propose shares similarities with network analysis techniques, our focus is different. 
+	For instance, we do not identify as <em>core objects</em> of a category <em>g</em> those objects that are more &ldquo;interconnected&rdquo;, or with the highest &ldquo;in-degree&rdquo; with objects of category <em>g</em>. 
+	Here, core objects of <em>g</em> are those objects that, whenever they are &ldquo;used&rdquo; (e.g., artists in playlists, movies watched and rated), they are used together with objects of category <em>g</em>.
+	This also explains why core objects are generally not the most popular ones, since popular objects tend to occur with objects by any category.
+	For example, <a href="http://www.mystrands.com/artist/3705">The Beatles</a> are <em>not</em> core artist for <em>Rock/Pop</em>, because <em>The Beatles</em> are so famous that they co-occur in playlists with artists by almost any other genre.</p>
+
+<h3>5. Software: R Package</h3>
+	<div class="sideimage_box">
+		<a href="http://cloud.github.com/downloads/claudiob/affinity/affinity_1.0.4.tar.gz"><img src="download_package_off.png"  style="border: 0px;" alt="Download R package" /></a>
+	</div>
+<p>In order for others to repeat the experiments, examples, and graphs described so far, we have produced the <strong>affinity R package</strong>.  This package contains all the functions described, as well as the MusicStrands dataset.</p>
+
+<p>R is a <a href="http://cran.r-project.org/">free software environment</a> for statistical computing and graphics. To install the affinity package and its requirements, <a href="http://cloud.github.com/downloads/claudiob/affinity/affinity_1.0.4.tar.gz">download affinity.tar.gz</a>, then type:</p>
+<pre>
+$ R
+> install.packages("XML")
+> install.packages("scatterplot3d")
+> quit()
+$ R CMD INSTALL <i>/path/to/downloaded/</i>affinity.tar.gz
+</pre>
+
+<p>To run some sample analysis and graphs about musical artists and genre-affinity, type:</p>
+<pre>
+$ R
+> library(affinity)
+> data(mystrandsGenres)
+> runExamples()
+> plotExamples()
+</pre>
+
+<p>To analyse tag-affinity, rather than genre-affinity, change the third instruction to: </p>
+<pre>> data(mystrandsTags)</pre>
+<p>In order to obtain the actual names of the artists and genres, an OpenStrands ID is required, which can be freely obtained from <a href="http://www.mystrands.com/openstrands">OpenStrands Web page</a>.<br />
+The affinity R package is released freely under a GPL General Public License.</p>
+
+<hr />
+
+
+<p id="contact">This page describes the joint work of <a href="http://www.iiia.csic.es/~claudio/">Claudio Baccigalupo</a> and <a href="http://www.informatics.indiana.edu/people/profiles.asp?u=jjdonald">Justin Donaldson</a>,<br /> with the support of <a href="http://www.iiia.csic.es/~enric/">Enric Plaza</a> and <a href="http://labs.strands.com">Strands Labs</a>.<br />
+Feedback is very welcome. Thanks :o)</p>
+
+<div class="sideimage_box" id="indiana">
+	<img src="indiana.png" alt="Indiana University" />
+</div>
+<div class="sideimage_box" id="iiia">
+	<img src="iiia.gif" alt="IIIA" />
+	<img src="csic.png" alt="CSIC" />
+</div>
+<div class="sideimage_box" id="strands">
+	<img src="strands.png" alt="Strands" />
+</div>
+
+
+<div id="footer_box">
+	Last update: 2008.10.14
+</div>
+
+</div>
+</body>	
+</html>

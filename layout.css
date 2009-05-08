@@ -1,0 +1,103 @@
+#document_box { 
+	text-align: left;
+	position: relative;
+	width: 600px;
+	margin: 4px auto 0 auto;
+	padding: 0;
+	padding-bottom: 10px;
+}
+
+#maincontent_box {
+	border: 0; margin: 0; padding: 0;
+	width: 600px;
+	z-index: 1;
+}
+
+#footer_box { 
+	width:600px; 
+	font-size: 0.7em;
+	padding: 2px 0 2px 0;
+	margin: 5px 0 0px 0;
+	border: 1px solid #248;
+	background-color: #884;
+	text-align: center;
+	clear: both;
+} 
+
+#contact { 
+	text-align: center; padding-right: 1em; padding-left: 1em;
+}
+
+
+/* *** SIDE IMAGE *** */
+
+div.sideimage_box {
+	border: 0; margin: 0; padding: 0;
+	margin-bottom: 10px; margin-left: 15px;   
+	width: 185px; 
+	vertical-align: top; 
+	text-align: right; /* per la legenda */
+	float: right;
+	clear: right;
+	z-index: 2;
+	position: relative;
+	/* hide overflow: hidden from mac ie5 \*/
+	position: static; 
+	/* end hide from mac ie5 */
+}
+
+.sideimage_box img.photo {
+  border: 2px solid #df2; 
+  padding: 0px; margin: 0px;
+  vertical-align: top;
+  height: 166px; width:140px;
+}
+
+.sideimage_box img.example {
+  border: 2px solid #fff; 
+  padding: 0px; margin: 0px;
+  vertical-align: top;
+  width:200px;
+}
+
+.sideimage_box#large_table {width: 600px; margin-left: 0;}
+.sideimage_box#large_table img {width: 615px; height: 180px;}
+.sideimage_box#indiana {width: 215px; clear: none;}
+.sideimage_box#indiana img {height: 30px; float: left;}
+.sideimage_box#iiia {width: 100px; clear: none;}
+.sideimage_box#iiia img {height: 30px; float: left;}
+.sideimage_box#strands {width: 255px; margin: 0; margin-top: 5px; clear: none;}
+.sideimage_box#strands img {height: 20px; float: left;}
+
+/* *** ATTACHMENT LIST *** */
+
+ul.attachment_list { 
+	width: 590px;
+	padding: 0; margin: 0; border: 0;
+}
+ 
+ul.attachment_list li {
+	list-style: none;
+	text-align: justify;
+	text-indent: 0em;
+	height: 70px; 
+	margin: 0px 0px 0px 10px;
+ }
+
+ul.attachment_list li img.icon {
+ 	float: left; 
+	padding-right: 15px;   /* needs BOX MODEL HACK !? */ 
+	width: 46px;
+	height: 48px; 
+	margin: 0px; 
+	border: 0;
+}
+
+ul.attachment_list li .description {
+	float: left; 
+	line-height: 1.5em;
+}  
+
+   
+ul li a img {border: 1px solid #48f; width: 160px; height: 120px; margin-bottom: 15px; margin-top: 5px;}
+ul li a:hover img {border: 1px solid #00f;}

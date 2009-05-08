@@ -1,0 +1,109 @@
+body 
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", helvetica, arial, sans-serif;
+	color: #000;
+	background: #505342 url(sun16.png) no-repeat bottom fixed; /* central bgcolor: #ff9b2c */
+	text-align: center;
+	margin: 0 auto 0 auto;
+}
+
+
+hr {
+	margin: 20px 0 5px 0;
+}
+
+a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+a:hover, a:active, a:focus {
+	color: #6cf;
+	text-decoration: underline;
+}
+
+
+strong {
+	font-family: Georgia, Times, "Times New Roman", Palatino, serif;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+em {
+	font-family: Georgia, Times, "Times New Roman", Palatino, serif;
+	font-size: 1em;
+	font-style: italic;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 1.6em;
+	margin-top: 0.5em;
+	text-align: center;
+	font-family: "Lucida Grande", Georgia, Times, "Times New Roman", Palatino, serif;
+	letter-spacing: 0px;
+	font-weight: bold;
+	color: #df2;
+	float: left;
+	clear: left;
+	width: 70%;
+	margin-right: 5%;
+	display: block;
+}
+
+h2 {
+	text-align: center;
+	font-size: 0.75em;
+	margin-top: 1.5em;
+	letter-spacing: 1px;
+	line-height: 1.5em;
+	font-weight: normal;
+	float: left;
+	width: 25%;
+	clear: right;
+	display: block;
+}
+
+h2 img {
+	width: 175px; 
+	margin-top: 10px;
+}
+
+h3 {
+	font-size: 1.1em;
+	margin-top: 1.5em;
+	letter-spacing: 1px;
+	padding: 2px;
+	border: 1px solid red;
+	font-weight: bold;
+	color: #000;
+	clear: both;
+	display: block;
+	background-color: yellow;
+	font-family: "Trebuchet MS";
+	margin-bottom: 0.5em;
+}
+
+h4 {
+	text-align: left; font-size: 1em; color: #147; padding: 0.5em 0 0.5em 0; margin: 0; color: #df2; clear: both;
+}
+
+em {font-weight: normal; font-style: italic; text-decoration: none;}  
+
+p {
+	font-size: 0.8em;
+	text-align: justify;
+	text-indent: 1em;
+	margin-left: 0em;
+	line-height: 1.4em;
+}
+ 
+li {
+	font-size: 0.8em;
+	text-indent: 0;
+	margin-left: 0em;
+	line-height: 1.3em;
+	list-style: circle;
+	margin-bottom: 0.5em;
+}
+ 
