@@ -1,11 +1,11 @@
 Package: affinity
-Version: 1.0.4
-Date: 2008-09-16 
+Version: 1.0.5
+Date: 2009-09-02 
 Author: Claudio Baccigalupo <claudio@iiia.csic.es>
 Maintainer: Claudio Baccigalupo <claudio@iiia.csic.es>
 Title: Analysis of fuzzy affinity to multiple categories
 Description: Contains functions to analyze and plot the affinity to multiple categories of an instance based on observed data about the co-occurrences of that instance with other instances of different categories.
-Depends: XML, scatterplot3d, grid
+Depends: RCurl, XML, scatterplot3d, grid
 License: GPL 2
 LazyLoad: yes
 URL: http://labs.strands.com/music/affinity/

@@ -100,7 +100,7 @@ plotSpie <- function(values, amplitudes=NULL, minValue=NULL, meanValue=NULL, num
 	angles								<- 2*pi*amplitudes/sum(amplitudes)
 	names(angles) 						<- colnames(values)
 	if(countObjects == 1) {
-		grid.text(paste(title,"of",rownames(values)[1]), 0, 1.2*radium, default.units="native", gp=gpar(cex=1.3))
+#		grid.text(paste(title,"of",rownames(values)[1]), 0, 1.2*radium, default.units="native", gp=gpar(cex=1.3))
 		radii	<- values - minValue
 		angles	<- cumsum(angles)
 	} else {
@@ -129,7 +129,7 @@ plotSpie <- function(values, amplitudes=NULL, minValue=NULL, meanValue=NULL, num
 
 		# Write the legend
 	    angleAnn <- (angles[i] + prevAngle)/2
-	    maxx 	 <- min(max(radii[i]+radium/7,radium/2.3), 1.1*radium)
+	    maxx 	 <- min(max(radii[i]+radium/7,radium/1.2), 3*radium)
 		rot 	 <- (prevAngle+angles[i])*90/pi
 	    grid.text(names(angles)[i], rot=rot, x=cos(angleAnn)*maxx, y=sin(angleAnn)*maxx, gp = gpar(col=colors[i], fill="white", lwd=2, fontsize=10), default.units="native")
 	}
@@ -165,7 +165,7 @@ plotAffinitySpie <- function(artistsId, genresId = getSortedCategories(1:8), plo
 	# artistsLabels	<- paste(getInstanceLabel(artistsId), " (", getCategoryLabel(getCategory(artistsId)), ")", sep="")
 	# 23.4.8 Since an instance can have more categories, the line has been changed to:
 	artistsLabels	<- paste(getInstanceLabel(artistsId), "\n(", sapply(artistsId, function(x) toString(getCategoryLabel(getCategory(x)))), ")", sep="")
-	genresLabels	<- abbreviate(getCategoryLabel(genresId),5)
+	genresLabels	<- getCategoryLabel(genresId)
 	values			<- matrix(heights, ncol=length(genresId), dimnames=list(artistsLabels,genresLabels))
 	amplitudes		<- if(plotPopularity) countInstances(genresId)	# If plotPopularity, then the amplitude of each sector represents is proportional to the popularity of that genre
 	minValue		<- if(plotCentrality) 0 else NULL			# For affinity degree, let it calculate automatically

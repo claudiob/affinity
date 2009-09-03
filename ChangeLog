@@ -1,3 +1,5 @@
+v1.0.5 - Required RCurl to download https files and changed URL prefix with https://www.mystrands.com/internalservices
+
 v1.0.4 - Updated for new Openstrands URL
 	openstrands.R - Changed URL prefix with http://www.mystrands.com/internalservices/
 

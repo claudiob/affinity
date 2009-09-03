@@ -18,7 +18,7 @@ openstrands.subscriberId <- function() {
 	}
 	# Then prompt the user
 	if(length(find(".mystrandsSubscriberId")) == 0) {
-		id <- readline("Enter your OpenStrands API subscriber ID: ")
+		id <- readline("Enter your OpenStrands API subscriber ID (e.g. 374S66AU9): ")
 		if(id != "") {
 			.mystrandsSubscriberId <<- id
 			.mystrandsSubscriberId
@@ -28,8 +28,8 @@ openstrands.subscriberId <- function() {
 }
 
 openstrands.listGenres <- function(genresId) {
-	genres.URL		<- paste("http://www.mystrands.com/internalservices/list/genres?num=9999&subscriberId=", openstrands.subscriberId(), sep ="")
-	genres.XMLTree	<- xmlRoot(xmlTreeParse(genres.URL))
+	genres.URL		<- paste("https://www.mystrands.com/internalservices/list/genres?num=9999&subscriberId=", openstrands.subscriberId(), sep ="")
+	genres.XMLTree	<- xmlRoot(xmlTreeParse(getURL(genres.URL)))
 	# Watch out the next as.character as it makes Rap return before R&amp;B
 	unname(sapply(genres.XMLTree[as.numeric(as.character(genresId))], function(x) openstrands.escapeXml(toString(x[["GenreName"]][[1]]))))
 }
@@ -37,9 +37,9 @@ openstrands.listGenres <- function(genresId) {
 openstrands.lookupArtists <- function(artistsId = NULL) {
 	# if(missing(artistsId)) stop("No artist ID provided")
 	# To do: split in many calls when length(artistsId) > 100
-	artistsUrl			 <- paste("http://www.mystrands.com/internalservices/lookup/artists?subscriberId=", openstrands.subscriberId(),  sep ="")
+	artistsUrl			 <- paste("https://www.mystrands.com/internalservices/lookup/artists?subscriberId=", openstrands.subscriberId(),  sep ="")
 	for(artistId in artistsId) artistsUrl <- paste(artistsUrl, "&id=", artistId, sep = "")
-	artistsXmlTree		 <- xmlRoot(xmlTreeParse(artistsUrl))
+	artistsXmlTree		 <- xmlRoot(xmlTreeParse(getURL(artistsUrl)))
 	matchedNames 		 <- sapply(artistsXmlTree["SimpleArtist",all=TRUE], function(x) openstrands.escapeXml(toString(x[["ArtistName"]][[1]])))
 	names(matchedNames)  <- sapply(artistsXmlTree["SimpleArtist",all=TRUE], function(x) xmlAttrs(x)["ArtistId"][[1]])
 	matchedNames
@@ -47,9 +47,9 @@ openstrands.lookupArtists <- function(artistsId = NULL) {
 
 openstrands.matchArtists <- function(artistsName = NULL) {
 	# if(missing(artistsName)) stop("No artist name provided")
-	artistsUrl			 <- paste("http://www.mystrands.com/internalservices/match/artists?subscriberId=", openstrands.subscriberId(),  sep ="")
+	artistsUrl			 <- paste("https://www.mystrands.com/internalservices/match/artists?subscriberId=", openstrands.subscriberId(),  sep ="")
 	for(artistName in artistsName) artistsUrl <-  paste(artistsUrl, "&name=", URLencode(artistName), sep = "")
-	artistsXmlTree		 <- xmlRoot(xmlTreeParse(artistsUrl))
+	artistsXmlTree		 <- xmlRoot(xmlTreeParse(getURL(artistsUrl)))
 	matchedNames		 <- sapply(artistsXmlTree["SimpleArtist",all=TRUE], function(x) openstrands.escapeXml(toString(x[["ArtistName"]][[1]])))
 	names(matchedNames)  <- sapply(artistsXmlTree["SimpleArtist",all=TRUE], function(x) xmlAttrs(x)["ArtistId"][[1]])
 	# Remove bracket text from artists names (e.g., "Death" for "Death (Rap)")
